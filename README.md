@@ -8,27 +8,22 @@ I'm currently learning:
 - Data Structures & Algorithms
 - Python
 - C / C#
-
-⚡ JavaScript (JS)
+- JavaScript (JS)
 
 🌐 Networking
 
 Topics I'm exploring:
 
-🧩 Basics
-
-🔐 Security
+- Basics
+- Security
 
 🖥️ Operating Systems (OS)
 
 Learning about:
 
-🔌 IoT
+- IoT
+- Linux
+- Windows
+- macOS
 
-🐧 Linux
-
-🪟 Windows
-
-🍎 macOS
-
-More topics will be added as I progress ✨
+Grinding now...
