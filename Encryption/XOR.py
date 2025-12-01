@@ -1,11 +1,15 @@
 # XOR = Text ^ Key = crypt
 # crypt ^ key = Decrypt
 
+# Before optimization
+
 # def isXOR(txt, encrypt):
 #     newText = []
 #     for c in txt:
 #         newText.append(ord(c) ^ encrypt)
 #     return ''.join(chr(n) for n in newText)
+
+# Optimized
 
 def isXOR(txt, encrypt):
     return ''.join(chr(ord(c) ^ encrypt) for c in txt)

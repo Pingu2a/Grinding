@@ -41,3 +41,4 @@ To decrypt it :
 
 ord() --> char to ascii
 chr() --> ascii to char
+
