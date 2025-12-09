@@ -1,15 +1,30 @@
-The Rock Paper Cisors game was the best game to play. I really loved to code it ! 
+I wanted to display real hand shapes, so I searched for graphic representations of rock, paper, and scissors and stored them in a list.
 
-First, I wanted to show real hand so I searched for graphic rock, paper, cisors with hands and stored these in a list.
+**Game Logic**
 
-I did the main logix like user choice and randomize the computer choie, then I did if else forest for the game logic (Win, Loose, draw).
+I implemented:
+- User input handling
+- Randomized computer choice
+- An if/else structure to determine the outcome (Win, Lose, Draw)
 
-After this, I did a function to check if the used type the rights digits (0, 1 or 2). If he doesn't it will ask again to put the correct number
+**Input Validation**
 
-I wanted to add color in my print so I took ANSI colors from my Treasure Island game.
+I created a function to ensure the user types a valid number (0, 1, or 2).
+If the input is invalid, the program asks again until a correct value is entered.
 
-I wanted the same logic as Treasure Island, I wanted to choose if I want to play again or not. So I did it with a While True and a small input and condition.
+**ANSI Colors**
 
-The last funny thing I wanted to add a winrate for the user so i was the last thing I did in this exercice.
+To make the game more visually appealing, I reused the ANSI colors I previously implemented in my Treasure Island project.
 
-I thought the winrate would be hard but it was quite easy and funny to do !
+**Replay System**
+
+Just like in Treasure Island, I added a replay option using a simple:
+
+while True:
+
+This allows the user to choose whether to play again.
+
+**Win Rate Tracking**
+
+The last feature I added was a win rate calculator for the player.
+I expected it to be difficult, but it was actually quite easy and enjoyable to implement.

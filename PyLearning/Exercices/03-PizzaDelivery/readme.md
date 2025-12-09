@@ -1,2 +1,4 @@
-With the pizza delivery, I learnt about how to store data in object (prices, and Pep_Prices), to use datas easily.
-Trained conditions too !
+With the pizza delivery, I learnt :
+- How to store data in object (prices, and Pep_Prices)
+- How to use datas easily.
+- How the conditions work
