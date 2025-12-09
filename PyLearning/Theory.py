@@ -48,3 +48,12 @@
 #     print(RED + "Yeah Apple is in the list ! " + END)
 
 # print(len(fruits))
+
+# ----------------------------------------------------------------------------------------------------------------
+
+
+l1 = ["peach", "Apple"]
+l2 = ["Avocado", "Tomato"]
+
+concat = l1+l2
+print(concat)
