@@ -51,9 +51,41 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
+# Training loops etc
 
-l1 = ["peach", "Apple"]
-l2 = ["Avocado", "Tomato"]
+# fruits = ["apple", "pineapple", "mango", "Grapes"]
+# var = 0
+# for fr in fruits:
+#     print(f"{fr} : {var}")
+#     var += 1
 
-concat = l1+l2
-print(concat)
+# nbr = [137, 482, 915, 204, 653, 781, 329, 576, 844, 290]
+
+# value = nbr[-1]
+# for n in nbr:
+#     if n < value:
+#         value = n
+
+# print(max(nbr))
+# print(min(nbr))
+# print(value)
+
+# for i in range(10, 0, -2):
+#     print(f"Noot Noot : {i}")
+
+# lst = list(range(5))
+# print(lst)
+
+# def FizzBuzz():
+#     lst = ["Fizz", "Buzz", "FizzBuzz"]
+#     for nbr in range(1, 101):
+#         if nbr % 3 == 0 and nbr % 5 == 0:
+#             print(lst[2])
+#         elif nbr % 3 == 0:
+#             print(lst[0])
+#         elif nbr % 5 == 0:
+#             print(lst[1])
+#         else:
+#             print(nbr)
+
+# FizzBuzz()
