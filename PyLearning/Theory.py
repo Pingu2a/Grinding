@@ -89,3 +89,87 @@
 #             print(nbr)
 
 # FizzBuzz()
+
+# ----------------------------------------------------------------------------------------------------------------
+
+
+# def Until90(age):
+#     return 4680 - (age * 52)
+
+# left = Until90(63)
+# print(f"You have {left} weeks left before reaching 90 years old ! \n")
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# Love calculator
+
+# def love(n1, n2):
+#     names = (n1 + n2).upper()
+#     Tword = "TRUE"
+#     Lword = "LOVE"
+#     count1 = 0
+#     count2 = 0
+#     for i in names:
+#         for j in Tword:
+#             if i == j:
+#                 count1 += 1
+#     for k in names:
+#         for l in Lword:
+#             if k == l:
+#                 count2 += 1
+#     print(f"Your love score : {count1}{count2}\n")
+
+# love("Marge Simpson", "Omer Simpson")
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# Dictionaries
+
+# def eat():
+#     return print("MIAM MIAM")
+# Penguin = {
+#     "name" : "Pingu",
+#     "Age" : 12,
+#     "family": {"dad": "papaNOOT", "mum": "mamaNOOT"},
+#     "food" : ["fish", "ice"],
+#     "eat": eat()
+# }
+
+# print(Penguin["Age"])
+# print(Penguin["food"][0])
+# print(Penguin["family"]["dad"] + "\n")
+
+# Penguin["friend"] = "niit"
+# Penguin["Age"] = 20
+
+# print(Penguin)
+
+# del Penguin["food"]
+
+# print(Penguin)
+# Penguin["eat"]
+
+# for key, val in Penguin.items():
+#     print(key," NOOT ", val)
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# student_scores = {
+#     'Harry': 88,
+#     'Ron': 78,
+#     'Hermione': 95,
+#     'Draco': 75,
+#     'Neville': 60
+# }
+
+# grades = ["Outstanding", "Exceeds Exectations", "Acceptable", "Fail"]
+
+# for student, score in student_scores.items():
+#     if score >= 90:
+#         print(f"Student name : {student} and his com : {grades[0]}")
+#     elif score > 80 and score <= 90:
+#         print(f"Student name : {student} and his com : {grades[1]}")
+#     elif score > 70 and score <= 80:
+#         print(f"Student name : {student} and his com : {grades[2]}")
+#     elif score <= 70:
+#         print(f"Student name : {student} and his com : {grades[3]}")

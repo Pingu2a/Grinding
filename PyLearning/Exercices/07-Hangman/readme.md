@@ -12,7 +12,6 @@ How I did :
 
 
 # Logic
-
 **Colors** 
 
 *lines 6-10*
