@@ -173,3 +173,30 @@
 #         print(f"Student name : {student} and his com : {grades[2]}")
 #     elif score <= 70:
 #         print(f"Student name : {student} and his com : {grades[3]}")
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# Created the method .title() for fun :)
+
+# def toUpper(txt):
+#     """
+#     This function can transform a str into a str with an uppercase at the begining and the rest of the text in lowercase
+    
+#     :param txt: text to transform
+#     :return: return the result with the first letter in uppercase and the rest in lowercase
+#     """
+#     result = ""
+#     i = 1
+#     result += txt[0].upper()
+#     while i < len(txt):
+#         result += txt[i].lower()
+#         i+=1
+#     return result
+
+# def toTitle(firstname, lastname):
+#     all = toUpper(firstname) + " " + toUpper(lastname)
+#     return print(all)
+
+# toTitle("OMEr", "SimpSON")
+# toTitle("omer", "simpson")
+# toTitle("OMER", "SIMPSON")
