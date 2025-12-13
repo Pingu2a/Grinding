@@ -1,15 +1,12 @@
+import random
+from utils.input_utils import RED, GREEN, YELLOW, RESET, y_or_n
+
 def RPS():
     user_score = 0
     computer_score = 0
     while True:
-        import random
 
-        RED = "\033[31m"
-        GREEN = "\033[32m"
-        YELLOW = "\033[33m"
-        RESET = "\033[0m"
-
-        shapes = [
+        SHAPES = [
             r"""
             _______
         ---'   ____)
@@ -63,11 +60,11 @@ def RPS():
         print("Welcome to the Rock, Paper, Cisors Game ! ")
 
         user_Choice = choice_nbr("What do you want to choose ? 0 for Rock, 1 for Paper, 2 for Cisors : ", [0, 1, 2])
-        print(shapes[user_Choice])
+        print(SHAPES[user_Choice])
 
         print("Computer choose :")
         computer_Choice = random.randint(0, 2)
-        print(shapes[computer_Choice])
+        print(SHAPES[computer_Choice])
 
         if user_Choice == computer_Choice:
             print(YELLOW + "It's a draw" + RESET)
@@ -82,7 +79,7 @@ def RPS():
 
         print(f"Your score : {user_score}\nComputer score : {computer_score}")
         print(f"Your win rate : {int(WinRate(user_score, computer_score))}%")
-        again = input("Wanna play again ? (y/n) :")
+        again = y_or_n("Wanna play again ? (y/n) :")
         if again != "y":
             print("Thank you goodbye")
             print(f"Final score :\n You : {user_score} - {computer_score} : Computer ")

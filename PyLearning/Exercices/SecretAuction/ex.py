@@ -1,11 +1,4 @@
-import os
-
-GREEN = "\033[32m"
-YELLOW = "\033[33m"
-RESET = "\033[0m"
-
-def clear():
-    os.system("cls" if os.name == "nt" else "clear")
+from utils.input_utils import GREEN, YELLOW, RESET, clear
 
 def SecretAuction():
     print("Welcome to the secret auction !")

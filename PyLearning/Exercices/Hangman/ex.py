@@ -1,21 +1,10 @@
 import random
-import os
+from utils.input_utils import RED, GREEN, YELLOW, RESET, clear
 
-# Colors
-
-RED = "\033[31m"
-GREEN = "\033[32m"
-YELLOW = "\033[33m"
-RESET = "\033[0m"
-
-# Clearing the terminal
-
-def clear():
-    os.system("cls" if os.name == "nt" else "clear")
 
 # Lists for the hangman stages and for the 20 animals
 def Hang():
-    hangman_stages = [
+    HANGMAN_STAGES = [
         """
         ------
         |    |
@@ -81,16 +70,16 @@ def Hang():
         """
     ]
 
-    animals = ["cat","dog","lion","tiger","elephant","giraffe","zebra","monkey","bear","wolf","fox","rabbit","horse","cow","sheep","goat","pig","deer","kangaroo","penguin"]
+    ANIMALS = ["cat","dog","lion","tiger","elephant","giraffe","zebra","monkey","bear","wolf","fox","rabbit","horse","cow","sheep","goat","pig","deer","kangaroo","penguin"]
 
     # Main game function
 
     def Game():
-        print("Welcome to the Hangman game ! ")
+        print("Welcome to the Hangman game ! \n")
 
     # Creating the main variables
 
-        secret_word = random.choice(animals)
+        secret_word = random.choice(ANIMALS)
         blank = ["-"] * len(secret_word)
         life = 6
         wrong_letters = []
@@ -100,12 +89,12 @@ def Hang():
         while True:
 
             print (f"Secret Word : {"".join(blank)}")
-            letter = input("Type a letter to check if she's in the word : ")
+            letter = input("Type a letter to check if it is in the word : ")
             if len(letter) != 1 or not letter.isalpha():
-                print("❌ Please enter only ONE letter.")
+                print(RED + "\nPlease enter only ONE letter.\n" + RESET)
                 continue
             if letter in blank or letter in wrong_letters:
-                print("You already tried this letter!")
+                print(RED + "\nYou already tried this letter!\n" + RESET)
                 continue
             if letter in secret_word:
                 for i in range(len(secret_word)):
@@ -119,22 +108,22 @@ def Hang():
 
     # Printing the game for the user
 
-            print(hangman_stages[mistakes])
-            print("wrong letters : " + "".join(wrong_letters))
-            print("".join(blank))
-            print(f"Your life : {life}")
+            print(HANGMAN_STAGES[mistakes])
+            print("wrong letters : " + "".join(wrong_letters) + "\n")
+            print("".join(blank) + "\n")
+            print(f"Your life : {life}\n")
 
     # First if, is for the winning case, the second one if the user lose the game
 
             if secret_word == "".join(blank):
                 finalWord = "".join(blank)
                 clear()
-                print(GREEN + f"You just found the word : {finalWord} !" + RESET)
+                print(GREEN + f"\nYou just found the word : {finalWord} !\n" + RESET)
                 break
             elif mistakes == 6:
                 clear()
                 print(RED + "Oh no you lost :( \n" + RESET)
-                print(f"The word was : {secret_word}")
+                print(f"\nThe word was : {secret_word}\n")
                 break
 
     # While loop for replay
