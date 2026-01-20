@@ -26,7 +26,6 @@ def hand_value(hand, cards_values):
     while total > 21 and aces > 0:
         total -= 10
         aces -= 1
-
     return total
 
 def winner(computer_total, user_total):
@@ -64,26 +63,34 @@ def play_one_game(money):
     print("Computer's cards :", f"{ComputerCards[0]} | ??")
     print("Your cards :", " | ".join(UserCards))
 
-    # Tour du joueur
-    while True:
-        user_total = hand_value(UserCards, cards)
+    user_total = hand_value(UserCards, cards)
+    computer_total = hand_value(ComputerCards, cards)
 
-        if user_total > 21:
-            print("\nBUST! You went over 21")
-            break
+    if user_total == 21:
+        print("Blackjack ! you win")
+        money += bet * 2.5
+    else:
+        # Tour du joueur
+        while True:
+            if user_total > 21:
+                print("\nBUST! You went over 21")
+                break
 
-        pull = y_or_n("\nDo you want to pull a card ? (y/n) ")
+            pull = y_or_n("\nDo you want to pull a card ? (y/n) ")
 
-        if pull == "n":
-            break
+            if pull == "n":
+                break
 
-        UserCards.append(draw_card())
-        print("Your cards :", " | ".join(UserCards))
+            UserCards.append(draw_card())
+            print("Your cards :", " | ".join(UserCards))
 
-    # Computer taking card only if user didn't bust
-    if hand_value(UserCards, cards) <= 21:
-        while hand_value(ComputerCards, cards) < 17:
-            ComputerCards.append(draw_card())
+        # Computer taking card only if user didn't bust
+        if hand_value(UserCards, cards) <= 21:
+            if computer_total == 21:
+                print("Computer blackJack ! you lost")
+            else:
+                while hand_value(ComputerCards, cards) < 17:
+                    ComputerCards.append(draw_card())
 
     # Reveal + result
     print("\n--- Final hands ---")
