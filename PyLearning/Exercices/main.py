@@ -8,12 +8,13 @@ import PWDGEN.ex as passwd
 import Hangman.ex as hangman
 import SecretAuction.ex as secret
 import BlackJack.ex as Bj
+import NumberGuessing.ex as nbGuess
 
 from utils.input_utils import clear, GREEN, RED, RESET
 
 while True:
     print("Exercices :\n1: IMC\n2: Tip calculator\n3: Pizza Delivery\n4: Treasure Island\n5: Rock Paper Scisors\n6: Password Generator\
-        \n7: Hangman\n8: Secret Auction\n9: Calculator\n10: BlackJack\nq: quit")
+        \n7: Hangman\n8: Secret Auction\n9: Calculator\n10: BlackJack\n11: Number guessing\nq: quit")
     choice = input("\nChoose an exercice : ")
 
     if choice == "1":
@@ -86,6 +87,13 @@ while True:
     ========================================
     """)
         Bj.BlackJack()
+    elif choice == "11":
+        print("""
+    ========================================
+                123  Number Guessing
+    ========================================
+    """)
+        nbGuess.number_guessing()
     elif choice == "q":
         print(GREEN + "\nThanks for playing !\n" + RESET)
         break

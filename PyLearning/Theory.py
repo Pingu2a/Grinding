@@ -200,3 +200,37 @@
 # toTitle("OMEr", "SimpSON")
 # toTitle("omer", "simpson")
 # toTitle("OMER", "SIMPSON")
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# def is_prime(num):
+#     if num < 2:
+#         return False
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+#     return True
+
+
+# print(is_prime(75))
+# print(is_prime(1))
+# print(is_prime(73))
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# Modifying a global variable 
+# Constant global variable must be in uppercase. The variable will not change
+
+# PI = 3.14
+# enemy = "Zombie"
+
+# def change_enemy():
+#     global enemy 
+#     enemy = "Skeleton"
+#     return enemy
+
+# print(enemy)
+# print(change_enemy())
+
+# ----------------------------------------------------------------------------------------------------------------
+
