@@ -1,5 +1,6 @@
 import random
-from utils.input_utils import y_or_n
+from utils.input_utils import y_or_n, RED, GREEN, YELLOW, RESET
+
 cards = {
     "2": 2, "3": 3, "4": 4, "5": 5, "6": 6,
     "7": 7, "8": 8, "9": 9, "10": 10,
@@ -51,7 +52,7 @@ def play_one_game(money):
         return money
 
     if bet > money:
-        print("You don't have enough money!")
+        print(f"{RED}You don't have enough money!{RESET}")
         return money
 
     money -= bet
@@ -67,13 +68,15 @@ def play_one_game(money):
     computer_total = hand_value(ComputerCards, cards)
 
     if user_total == 21:
-        print("Blackjack ! you win")
+        print(f"{GREEN}Blackjack ! you win{RESET}")
         money += bet * 2.5
     else:
         # Tour du joueur
         while True:
+            user_total = hand_value(UserCards, cards)
+
             if user_total > 21:
-                print("\nBUST! You went over 21")
+                print(f"{RED}\nBUST! You went over 21{RESET}")
                 break
 
             pull = y_or_n("\nDo you want to pull a card ? (y/n) ")
@@ -87,7 +90,7 @@ def play_one_game(money):
         # Computer taking card only if user didn't bust
         if hand_value(UserCards, cards) <= 21:
             if computer_total == 21:
-                print("Computer blackJack ! you lost")
+                print(f"{RED}Computer blackJack ! you lost{RESET}")
             else:
                 while hand_value(ComputerCards, cards) < 17:
                     ComputerCards.append(draw_card())
@@ -103,13 +106,13 @@ def play_one_game(money):
     w = winner(computer_total, user_total)
 
     if w == "user":
-        print("\nYou won!")
+        print(f"{GREEN}\nYou won!{RESET}")
         money += bet * 2 
     elif w == "draw":
-        print("\nDraw ")
+        print(f"{YELLOW}\nDraw{RESET}")
         money += bet 
     else:
-        print("\nComputer won")
+        print(f"{RED}\nComputer won{RESET}")
 
     print(f"Computer: {computer_total} | You: {user_total}")
     print("Your money is now:", money, "$")
@@ -120,7 +123,7 @@ def BlackJack():
 
     while True:
         if money <= 0:
-            print("\nYou have no money left... Game over!")
+            print(f"{RED}\nYou have no money left... Game over!{RESET}")
             break
 
         money = play_one_game(money)
