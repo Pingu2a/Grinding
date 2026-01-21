@@ -1,6 +1,6 @@
 import random
 from utils.input_utils import GREEN, RED, CYAN, RESET, y_or_n, clear, isint
-NUMBER = random.randint(1,100)
+
 
 def check_answer(user_guess, answer):
     if user_guess > answer:
@@ -13,6 +13,7 @@ def check_answer(user_guess, answer):
 
 def number_guessing():
     while True:
+        NUMBER = random.randint(1,100)
         print("Welcome to the Number Guessing Game!")
         print("I'm thinking of a number between 1 and 100.")
         difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
@@ -35,4 +36,3 @@ def number_guessing():
             clear()
         elif again == 'n':
             return
-    
