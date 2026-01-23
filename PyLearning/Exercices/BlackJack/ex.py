@@ -1,5 +1,5 @@
 import random
-from utils.input_utils import y_or_n, RED, GREEN, YELLOW, RESET
+from utils.input_utils import y_or_n,isint, RED, GREEN, YELLOW, RESET
 
 cards = {
     "2": 2, "3": 3, "4": 4, "5": 5, "6": 6,
@@ -45,7 +45,7 @@ def play_one_game(money):
     print("Welcome to the BlackJack Game")
     print("Your money:", money, "$")
 
-    bet = int(input("How much money do you want to bet ? : $"))
+    bet = isint("How much money do you want to bet ? : $")
 
     if bet <= 0:
         print("Bet must be > 0")

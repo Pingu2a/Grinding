@@ -234,14 +234,28 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
-def test():
-    while True:
-        try:
-            age = int(input("How old are you ?"))
-            return age
-        except ValueError:
-            print("try again")
+# def test():
+#     while True:
+#         try:
+#             age = int(input("How old are you ?"))
+#             return age
+#         except ValueError:
+#             print("try again")
 
-age = test()
-if age > 18:
-    print("Majeur")
+# age = test()
+# if age > 18:
+#     print("Majeur")
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# try:
+#     f = open("demofile.txt", "a")
+#     try:
+#         f.write("Lorum Ipsum")
+#     except:
+#         print("Something went wrong when writing to the file")
+#     finally:
+#         f.close()
+# except:
+#     print("Something went wrong when opening the file")
+
