@@ -234,3 +234,14 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
+def test():
+    while True:
+        try:
+            age = int(input("How old are you ?"))
+            return age
+        except ValueError:
+            print("try again")
+
+age = test()
+if age > 18:
+    print("Majeur")

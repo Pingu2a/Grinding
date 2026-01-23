@@ -22,7 +22,6 @@ def number_guessing():
         win = 0
         while attempts > 0 and win == 0:
             print(f"Attempts : {CYAN}{attempts}{RESET}")
-            #user_number = int(input("type a number : "))
             user_number = isint("Typer a number : ")
             check_ans = check_answer(user_number, NUMBER)
             if check_ans == 1:
