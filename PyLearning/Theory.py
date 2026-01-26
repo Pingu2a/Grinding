@@ -379,3 +379,93 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
+# class Chien:
+#     def __init__(self, nom, race):
+#         self.nom = nom
+#         self.race = race
+
+#     def abboyer(self):
+#         return f"{self.nom} dit :Ouaf"
+
+#     def dog(self):
+#         return f"{self.nom} est une {self.race} !"
+
+# class chat(Chien):
+#     def __init__(self, nom, race):
+#         self.nom = nom
+#         self.race = race
+#     def miaule(self):
+#         return f"{self.nom} dit : Miaou !"
+
+# mon_chien = Chien("pepito", "crapule")
+# mon_chat = chat("Nyxie", "Queen")
+# print(mon_chien.dog())
+# print(mon_chat.dog())
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# class Humain:
+#     """
+#     Classe des êtres humains
+#     """
+
+#     humain_crees = 0
+
+#     def __init__(self, nom, age=1):
+#         print("Salut")
+#         self.prenom = nom
+#         self.age = age
+#         Humain.humain_crees += 1
+
+# h1 = Humain("Pignu")
+# h2 = Humain("NOOT")
+
+
+# print(h1.prenom)
+# print(h1.age)
+# print(h1.humain_crees)
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# class Humain:
+
+#     lieu_habitation = "Terre"
+
+#     def __init__(self, nom, age):
+#         self.nom = nom
+#         self.age = age
+
+#     def parler(self, msg):
+#         print("{} a dit : {}".format(self.nom, msg))
+
+#     #méthode de classe
+#     def changer_planete(cls, new_planet):
+#         Humain.lieu_habitation = new_planet
+
+#     changer_planete = classmethod(changer_planete)
+
+#     #méthode statique
+#     def definition():
+#         print("L'humain est classé bla bla bla.")
+
+#     definition = staticmethod(definition)
+
+# h1 = Humain("lio", 24)
+
+# print("Planète actuelle : {}".format(Humain.lieu_habitation))
+
+# Humain.changer_planete("Zboub")
+
+# print("Planète actuelle : {}".format(Humain.lieu_habitation))
+
+# ----------------------------------------------------------------------------------------------------------------
+
+class Question:
+
+    def __init__(self, txt, answer):
+        self.text = txt
+        self.answer = answer
+
+new_question = Question("2+2=4", "True")
+
+input(f"is {new_question.text} {new_question.answer} ? :")
