@@ -181,7 +181,7 @@
 # def toUpper(txt):
 #     """
 #     This function can transform a str into a str with an uppercase at the begining and the rest of the text in lowercase
-    
+
 #     :param txt: text to transform
 #     :return: return the result with the first letter in uppercase and the rest in lowercase
 #     """
@@ -218,14 +218,14 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
-# Modifying a global variable 
+# Modifying a global variable
 # Constant global variable must be in uppercase. The variable will not change
 
 # PI = 3.14
 # enemy = "Zombie"
 
 # def change_enemy():
-#     global enemy 
+#     global enemy
 #     enemy = "Skeleton"
 #     return enemy
 
@@ -258,4 +258,124 @@
 #         f.close()
 # except:
 #     print("Something went wrong when opening the file")
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# POO Python
+
+# import turtle
+
+# my_screen = turtle.Screen()
+
+# michel = turtle.Turtle()
+# michel.shape("turtle")
+# michel.turtlesize(3, 3, 2)
+# michel.color("green")
+
+# # L
+# michel.right(90)
+# michel.forward(200)
+# michel.left(90)
+# michel.forward(100)
+
+# # I
+# michel.left(90)
+# michel.forward(100)
+# michel.penup()
+# michel.forward(30)
+# michel.pendown()
+# michel.dot(10)
+# michel.penup()
+# michel.backward(30)
+# michel.pendown()
+# michel.backward(100)
+# michel.right(90)
+
+# # o
+# michel.forward(50)
+# michel.left(90)
+# michel.forward(100)
+# michel.right(90)
+# michel.forward(100)
+# michel.right(90)
+# michel.forward(100)
+# michel.right(90)
+# michel.forward(100)
+# michel.left(180)
+# michel.forward(100)
+
+# # N
+# michel.forward(50)
+# michel.left(90)
+# michel.forward(100)
+# michel.right(150)
+# michel.forward(100)
+# michel.left(150)
+# michel.forward(100)
+# michel.right(180)
+# michel.forward(120)
+# michel.left(90)
+
+# # E
+# michel.forward(50)
+# michel.left(90)
+# michel.forward(100)
+# michel.right(90)
+# michel.forward(50)
+# michel.backward(50)
+# michel.right(90)
+# michel.forward(50)
+# michel.left(90)
+# michel.forward(50)
+# michel.backward(50)
+# michel.right(90)
+# michel.forward(50)
+# michel.left(90)
+# michel.forward(50)
+
+# # L
+# michel.forward(50)
+# michel.left(90)
+# michel.forward(100)
+# michel.backward(100)
+# michel.right(90)
+# michel.forward(100)
+
+# michel.circle(20)
+
+# print(michel)
+# my_screen.exitonclick()
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# from prettytable import from_csv, TableStyle
+# from prettytable.colortable import ColorTable, Themes
+
+# my_table = PrettyTable()
+# with open("pingouins.csv", "r") as fp:
+#     my_table = from_csv(fp)
+
+# my_table.__class__ = ColorTable
+# my_table.theme = Themes.HIGH_CONTRAST
+# my_table.set_style(TableStyle.DOUBLE_BORDER)
+# new_rows = []
+# for row in my_table.rows:
+#     row[1] = int(row[1])
+#     row[3] = int(row[3])
+#     new_rows.append(row)
+
+# my_table.clear_rows()
+# my_table.add_rows(new_rows)
+# my_table = ColorTable(theme=Themes.HIGH_CONTRAST)
+# my_table.field_names = ["Nom pingouin", "Age", "Habitation", "Enfant(s)"]
+# my_table.add_row(["Pingu", 2, "Banquise", 4])
+# my_table.add_row(["Noot", 8, "Eau", 0])
+# my_table.add_row(["Michel", 40, "terre", 12])
+# my_table.align["Nom pingouin"] = "l"
+# my_table.align["Enfant(s)"] = "r"
+
+# print(my_table)
+# print(my_table.get_string(sortby="Age"))
+
+# ----------------------------------------------------------------------------------------------------------------
 
