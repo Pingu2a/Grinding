@@ -1,3 +1,4 @@
+from utils.input_utils import GREEN, LIGHTPINK, RED, RESET
 
 COFFEES = {
     "espresso":{
@@ -59,7 +60,7 @@ def check_resources(usr_choice):
     ingredients_needed = COFFEES[usr_choice]["ingredients"]
     for item in ingredients_needed:
         if ingredients_needed[item] > ressources[item]:
-            print(f"Sorry, there is not enough {item}.")
+            print(f"\n{RED}Sorry, there is not enough {item}.{RESET}\n")
             return False
     return True
 
@@ -81,7 +82,7 @@ def coffee_machine():
             refill()
             continue
         if usr_choice not in COFFEES:
-            print("Invalid choice, please insert a good one.")
+            print(f"{RED}\nInvalid choice, please insert a good one.\n{RESET}")
             continue
 
         if not check_resources(usr_choice):
@@ -104,8 +105,8 @@ def coffee_machine():
             ressources["money"] = total_money - money_back
 
             print("-------------------------------")
-            print(f"Total inserted : {total_money:.2f}$")
-            print(f"{usr_choice} price : {COFFEES[usr_choice]["price"]:.2f}$")
-            print(f"Here is {money_back:.2f}$ in change.")
-            print(f"Here is your {usr_choice} Enjoy !")
+            print(f"Total inserted : {LIGHTPINK}{total_money:.2f}${RESET}")
+            print(f"{usr_choice} price : {LIGHTPINK}{COFFEES[usr_choice]["price"]:.2f}${RESET}")
+            print(f"Here is {LIGHTPINK}{money_back:.2f}${RESET} in change.")
+            print(f"{GREEN}Here is your {usr_choice} Enjoy !{RESET}")
             print("-------------------------------")

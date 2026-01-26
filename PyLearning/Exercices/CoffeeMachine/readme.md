@@ -15,31 +15,31 @@ Here is how it works:
 
 ## Logic
 
-<span style="color: blue;">function coffee_machine</span>
+**function coffee_machine**
 
 This is the main function that runs the machine. It uses a while True loop to keep the machine running until the user types "off". It manages the flow of the program:
 - Taking the user's order.
 - Checking if the choice is valid.
-- Verifying if there are enough resources using <span style="color: green;">check_resources</span>.
+- Verifying if there are enough resources using *check_resources*.
 - Processing the payment if resources are sufficient.
-- Calculating the change and serving the coffee using <span style="color: green;">coffee</span>.
+- Calculating the change and serving the coffee using *coffee*.
 
-<span style="color: blue;">function money_putted</span>
+**function money_putted**
 
 This function takes a list of coins inserted by the user and calculates the total value in dollars.
 
-<span style="color: blue;">function check_resources</span>
+**function check_resources**
 
 This function compares the ingredients required for the chosen drink with the current ressources. It returns False and alerts the user if something is missing.
 
-<span style="color: blue;">function coffee</span>
+**function coffee**
 
 This function performs the "brewing" action. It deducts the required ingredients from the machine's inventory and returns the price of the drink.
 
-<span style="color: blue;">function machine_report</span>
+**function machine_report**
 
 An admin function that prints the current status of all resources (Water, Milk, Coffee) and the total money earned by the machine.
 
-<span style="color: blue;">function refill</span>
+**function refill**
 
-Allows the user/technician to manually add quantities to the water, milk, and coffee stocks.
+Allows the user to manually add quantities to the water, milk, and coffee stocks.
