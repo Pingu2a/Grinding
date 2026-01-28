@@ -545,3 +545,27 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
+from turtle import Turtle, Screen
+
+
+Michel = Turtle()
+Michel.shape("turtle")
+Michel.color("#4a6741")
+Michel.shapesize(2, 2, 2)
+
+
+
+
+
+for i in range(4):
+    Michel.forward(100)
+    Michel.left(90)
+
+
+
+
+
+
+
+screen = Screen()
+screen.exitonclick()
