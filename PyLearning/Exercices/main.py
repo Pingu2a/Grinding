@@ -11,13 +11,14 @@ import BlackJack.ex as Bj
 import NumberGuessing.ex as nbGuess
 import CoffeeMachine.ex as coffee
 import Quizz.main as quizz
+import Painting.ex as paint
 
 from utils.input_utils import clear, GREEN, RED, RESET
 
 while True:
     print("Exercices :\n1: IMC\n2: Tip calculator\n3: Pizza Delivery\n4: Treasure Island\n5: Rock Paper Scisors\n6: Password Generator\
         \n7: Hangman\n8: Secret Auction\n9: Calculator\n10: BlackJack\n11: Number guessing\n" \
-        "12: Coffe Machine\n13: Quizz\nq: quit")
+        "12: Coffe Machine\n13: Quizz\n14: Painting\nq: quit")
     choice = input("\nChoose an exercice : ")
 
     if choice == "1":
@@ -111,6 +112,13 @@ while True:
     ========================================
     """)
         quizz.test()
+    elif choice == "14":
+        print("""
+    ========================================
+                🖼️  Painting
+    ========================================
+    """)
+        paint.Hirst()
     elif choice == "q":
         print(GREEN + "\nThanks for playing !\n" + RESET)
         break

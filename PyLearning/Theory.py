@@ -545,27 +545,92 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
-from turtle import Turtle, Screen
+# from turtle import Turtle, Screen
+# import turtle
+# import random
+
+# turtle.colormode(255)
+
+# Michel = Turtle()
+# Michel.shape("turtle")
+# Michel.pencolor()
+# Michel.shapesize(3, 3, 3)
+# Michel.pensize(10)
+# Michel.speed(5)
+
+# # draw triangle, square, pentagon, hexagon, heptagon, octagon, nonagon, decagon
+
+# def draw_shape(num_sides):
+#     angle = 360 / num_sides
+#     for _ in range(num_sides):
+#         Michel.forward(100)
+#         Michel.right(angle)
+
+# for shape_side_n in range(3, 11):
+#     Michel.pencolor(random.choice(colors))
+#     draw_shape(shape_side_n)
+
+# # random walk
+# for s in range(100):
+#     red = random.randint(0,255)
+#     blue = random.randint(0,255)
+#     green = random.randint(0,255)
+
+#     Michel.pencolor(red, green, blue)
+#     Michel.forward(100)
+#     angles = [0,90,180,270]
+#     Michel.setheading(random.choice(angles))
+
+# #Spyrograph
+
+# def random_color():
+#     r = random.randint(0,255)
+#     g = random.randint(0,255)
+#     b = random.randint(0,255)
+
+#     return (r, g, b)
+
+# def draw_spirograph(size_gap):
+#     for _ in range(int(360 / size_gap)):
+#         Michel.pencolor(random_color())
+#         Michel.circle(100)
+#         Michel.setheading(Michel.heading() + size_gap)
+
+# draw_spirograph(5)
 
 
-Michel = Turtle()
-Michel.shape("turtle")
-Michel.color("#4a6741")
-Michel.shapesize(2, 2, 2)
 
 
+# import colorgram
+
+# colors = colorgram.extract('hirst.jpg', 10)
+# new = []
+# for i in range(10):
+#     first_color = colors[i]
+#     rgb = first_color.rgb
+#     red = rgb[0]
+#     new.append((rgb[0], rgb[1], rgb[2]))
+# print(new)
+# rgb_colors = []
+# for color in colors:
+#     r = color.rgb.r
+#     g = color.rgb.g
+#     b = color.rgb.b
+#     new_color = (r, g, b)
+#     rgb_colors.append(new_color)
+
+# print(rgb_colors)
 
 
-
-for i in range(4):
-    Michel.forward(100)
-    Michel.left(90)
-
-
+# for _ in range(10):
+#     Michel.dot(20, random.choice(rgb_colors))
+#     Michel.penup()
+#     Michel.forward(50)
 
 
+# screen = Screen()
+# screen.setworldcoordinates(-100, -100, 100, 100)
+# screen.exitonclick()
 
 
-
-screen = Screen()
-screen.exitonclick()
+# ----------------------------------------------------------------------------------------------------------------
