@@ -460,12 +460,88 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
-class Question:
+# class Smartphone:
+#     stock_total = 0
 
-    def __init__(self, txt, answer):
-        self.text = txt
-        self.answer = answer
+#     def __init__(self, model, price):
+#         self.model = model
+#         self.price = price
+#         self.__class__.stock_total += 1
 
-new_question = Question("2+2=4", "True")
+#     def add_promo(self, remise):
+#         self.price -= remise
 
-input(f"is {new_question.text} {new_question.answer} ? :")
+#     @classmethod
+#     def print_stock(cls):
+#         print(f"Stock total : {__class__.stock_total}")
+
+#     @staticmethod
+#     def imei_validate(imei):
+#         return len(str(imei)) == 15
+
+# Phone1 = Smartphone("Iphone", 1000)
+# Phone2 = Smartphone("Samsung", 800)
+
+# print("Price before : {}".format(Phone1.price))
+# Phone1.add_promo(100)
+# print("Price after : {}".format(Phone1.price))
+# Smartphone.print_stock(Smartphone)
+# print(Phone1.imei_validate(1234567891928223))
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# from prettytable import PrettyTable
+# from prettytable.colortable import ColorTable, Themes
+
+# def add_tic(nbr):
+#     s = str(nbr)
+#     result = ""
+#     count = 0
+
+#     for digit in reversed(s):
+#         if count == 3:
+#             result += "'"
+#             count = 0
+#         result += digit
+#         count += 1
+#     return result[::-1]
+
+# table = PrettyTable()
+# table = ColorTable(theme=Themes.HIGH_CONTRAST)
+# class Ferrari :
+#     shipping_fees = 5000
+
+#     def __init__(self, model, factory_price):
+#         self.model = model
+#         self.factory = factory_price
+    
+#     def get_total_price(self):
+#         return self.factory + __class__.shipping_fees
+    
+#     @classmethod
+#     def set_global_fees(cls, new_amount):
+#         __class__.shipping_fees = new_amount
+    
+#     @staticmethod
+#     def is_classic_color(color):
+#         return color == "red" or color == "yellow"
+    
+# fefe1 = Ferrari("F40", 1500000)
+# fefe2 = Ferrari("812 Superfast", 500000)
+
+# Ferrari.set_global_fees(20000)
+# fefe1_color = Ferrari.is_classic_color("red")
+# fefe2_color = Ferrari.is_classic_color("blue")
+
+# table.field_names = ["Model", "Price", "Total Price", "Classic color"]
+# table.add_row([fefe1.model, add_tic(fefe1.factory), add_tic(fefe1.get_total_price()), fefe1_color])
+# table.add_row([fefe2.model, add_tic(fefe2.factory), add_tic(fefe2.get_total_price()), fefe2_color])
+# table.align["Model"] = "l"
+# table.align["Price"] = "c"
+# table.align["Total Price"] = "c"
+# table.align["Classic color"] = "r"
+
+# print(table)
+
+# ----------------------------------------------------------------------------------------------------------------
+
