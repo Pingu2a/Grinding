@@ -3,6 +3,7 @@
 This folder is my python playground ! I do projetcs, try some stuffs and learn theory. Be sure to be in `Pylearning` folder. Here is how to quick setup :
 
 ```bash
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
