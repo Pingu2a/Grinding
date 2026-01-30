@@ -621,7 +621,6 @@
 
 # print(rgb_colors)
 
-
 # for _ in range(10):
 #     Michel.dot(20, random.choice(rgb_colors))
 #     Michel.penup()
