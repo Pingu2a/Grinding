@@ -1,9 +1,15 @@
 # Playground
 
-This folder is my python playground ! I do projetcs, try some stuffs and learn theory. You can play all my project only with 1 command ! You need to go inside `Exercices` folder and type :
+This folder is my python playground ! I do projetcs, try some stuffs and learn theory. Be sure to be in `Pylearning` folder. Here is how to quick setup :
 
 ```bash
 source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Now just go inside the `Exercices` folder and type :
+
+```python
 python3 main.py
 ```
 
