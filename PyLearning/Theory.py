@@ -370,7 +370,7 @@
 # my_table.field_names = ["Nom pingouin", "Age", "Habitation", "Enfant(s)"]
 # my_table.add_row(["Pingu", 2, "Banquise", 4])
 # my_table.add_row(["Noot", 8, "Eau", 0])
-# my_table.add_row(["Michel", 40, "terre", 12])
+# my_table.add_row(["michel", 40, "terre", 12])
 # my_table.align["Nom pingouin"] = "l"
 # my_table.align["Enfant(s)"] = "r"
 
@@ -551,23 +551,23 @@
 
 # turtle.colormode(255)
 
-# Michel = Turtle()
-# Michel.shape("turtle")
-# Michel.pencolor()
-# Michel.shapesize(3, 3, 3)
-# Michel.pensize(10)
-# Michel.speed(5)
+# michel = Turtle()
+# michel.shape("turtle")
+# michel.pencolor()
+# michel.shapesize(3, 3, 3)
+# michel.pensize(10)
+# michel.speed(6)
 
 # # draw triangle, square, pentagon, hexagon, heptagon, octagon, nonagon, decagon
 
 # def draw_shape(num_sides):
 #     angle = 360 / num_sides
 #     for _ in range(num_sides):
-#         Michel.forward(100)
-#         Michel.right(angle)
+#         michel.forward(100)
+#         michel.right(angle)
 
 # for shape_side_n in range(3, 11):
-#     Michel.pencolor(random.choice(colors))
+#     michel.pencolor(random.choice(colors))
 #     draw_shape(shape_side_n)
 
 # # random walk
@@ -576,12 +576,12 @@
 #     blue = random.randint(0,255)
 #     green = random.randint(0,255)
 
-#     Michel.pencolor(red, green, blue)
-#     Michel.forward(100)
+#     michel.pencolor(red, green, blue)
+#     michel.forward(100)
 #     angles = [0,90,180,270]
-#     Michel.setheading(random.choice(angles))
+#     michel.setheading(random.choice(angles))
 
-# #Spyrograph
+#Spyrograph
 
 # def random_color():
 #     r = random.randint(0,255)
@@ -592,9 +592,9 @@
 
 # def draw_spirograph(size_gap):
 #     for _ in range(int(360 / size_gap)):
-#         Michel.pencolor(random_color())
-#         Michel.circle(100)
-#         Michel.setheading(Michel.heading() + size_gap)
+#         michel.pencolor(random_color())
+#         michel.circle(100)
+#         michel.setheading(michel.heading() + size_gap)
 
 # draw_spirograph(5)
 
@@ -622,14 +622,164 @@
 # print(rgb_colors)
 
 # for _ in range(10):
-#     Michel.dot(20, random.choice(rgb_colors))
-#     Michel.penup()
-#     Michel.forward(50)
+#     michel.dot(20, random.choice(rgb_colors))
+#     michel.penup()
+#     michel.forward(50)
 
 
 # screen = Screen()
-# screen.setworldcoordinates(-100, -100, 100, 100)
 # screen.exitonclick()
 
 
 # ----------------------------------------------------------------------------------------------------------------
+
+# Exercice Ferrari garage
+
+# garage = [
+#     {"model": "F40", "price":1500000,"color":"red", "tested":False},
+#     {"model": "812", "price":500000,"color":"Green", "tested":False},
+#     {"model": "SF90", "price":800,"color":"Grey", "tested":False},
+#     {"model": "250GTO", "price":80000000,"color":"yellow", "tested":False},
+#     {"model": "SP3", "price":3500000,"color":"red", "tested":False}
+#     ]
+
+# class Car:
+#     def __init__(self,model, price, color, tested):
+#         self.model = model
+#         self.price = price
+#         self.color = color
+#         self.tested = tested
+
+# cars_in_garage = []
+
+# for i in range(len(garage)):
+#     c = Car(garage[i]["model"],garage[i]["price"],garage[i]["color"],garage[i]["tested"],)
+#     cars_in_garage.append(c)
+
+
+# class CarDealer:
+#     def __init__(self, garage):
+#         self.garage = garage
+    
+#     def isTested(self, model_name):
+#         for car in self.garage:
+#             if car.model == model_name:
+#                 car.tested = True
+#                 print(f"Vroom ! You're going to test the Ferrari {car.model}!")
+#                 break
+
+#     def BuyCar(self,model_n):
+#         found = None
+#         for car in self.garage:
+#             if car.model == model_n:
+#                 found = car
+#                 break
+#         if found:
+#             self.garage.remove(found)
+#             print(f"GG You just bought the {found.model} for {found.price}$")
+
+
+# dealer = CarDealer(cars_in_garage)
+
+# for i in range(len(cars_in_garage)):
+#     print(cars_in_garage[i].model)
+# usr_choice = input("Choose the car you want to buy : ")
+# dealer.BuyCar(usr_choice)
+
+# for i in range(len(cars_in_garage)):
+#     print(cars_in_garage[i].model)
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# from turtle import Turtle, Screen
+# import random
+
+
+# michel = Turtle()
+# screen = Screen()
+
+# michel = Turtle()
+# michel.shape("turtle")
+# michel.pencolor()
+# michel.shapesize(3, 3, 3)
+# michel.pensize(10)
+# michel.speed(5)
+# colors = [
+#     "#FFD1DC", # Rose poudré
+#     "#AEC6CF", # Bleu ciel pastel
+#     "#B2FBA5", # Vert menthe
+#     "#E6E6FA", # Lavande
+#     "#FFFACD", # Jaune citron pâle
+#     "#FFDAB9", # Pêche
+#     "#FFB347", # Abricot clair
+#     "#EAEAEA", # Gris perle
+#     "#D19FE8", # Mauve guimauve
+#     "#AFEEEE"  # Vert eau
+# ]
+
+# def move_forwards():
+#     michel.pencolor(random.choice(colors))
+#     michel.forward(50)
+#     screen.update()
+# def move_backwards():
+#     michel.backward(50)
+# def move_left():
+#     new = michel.heading() + 10
+#     michel.setheading(new)
+# def move_right():
+#     new = michel.heading() - 10
+#     michel.setheading(new)
+# def clear():
+#     michel.clear()
+#     michel.penup()
+#     michel.home()
+#     michel.pendown()
+# def exitit():
+#     screen.bye()
+# screen.listen()
+# screen.onkey(move_forwards, "w")
+# screen.onkey(move_backwards, "s")
+# screen.onkey(move_left, "a")
+# screen.onkey(move_right, "d")
+# screen.onkey(clear, "c")
+# screen.onkey(exitit, "e")
+
+
+# screen.exitonclick()
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# from turtle import Turtle, Screen
+# import random
+
+# is_race_on = False
+# screen = Screen()
+# screen.setup(1500,1400)
+# usr_choice = screen.textinput("Make your bet", "Wich turtle will win the race ? Enter a color : ")
+# colors = ["red","orange","yellow","green","blue","purple","blue",]
+# y_pos = [-100,-50,0,50,100,150]
+# all_turtles = []
+# for turtle_index in range(0,6):
+#     new_t = Turtle("turtle")
+#     new_t.shapesize(2, 2, 2)
+#     new_t.color(colors[turtle_index])
+#     new_t.penup()
+#     new_t.goto(-700, y_pos[turtle_index])
+#     all_turtles.append(new_t)
+
+# if usr_choice:
+#     is_race_on = True
+
+# while is_race_on:
+#     for turtle in all_turtles:
+#         if turtle.xcor() > 720:
+#             is_race_on = False
+#             winning = turtle.pencolor()
+#             if winning == usr_choice:
+#                 print("you won")
+#             else:
+#                 print(f"You lost ! {winning} won !")
+#         distance = random.randint(0,20)
+#         turtle.forward(distance)
+
+# screen.exitonclick()
