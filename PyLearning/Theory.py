@@ -783,3 +783,33 @@
 #         turtle.forward(distance)
 
 # screen.exitonclick()
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# class Vehicle:
+#     def __init__(self,vehicle_name, fuel):
+#         self.name = vehicle_name
+#         self.fuel = fuel
+
+#     def movin(self):
+#         print(f"The vehicle {self.name} is moving...")
+
+# class Car(Vehicle):
+#     def __init__(self, car_name, power, fuel):
+#         super().__init__(vehicle_name=car_name, fuel=fuel)
+#         self.hp = power
+
+#     def speed(self):
+#         super().movin()
+#         print(f"The car has {self.hp}HP!")
+
+# car1 = Car(car_name="toyota", power=400, fuel=40)
+
+# print(car1.fuel)
+# car1.movin()
+# print(car1.name)
+# print("---------------------------\n")
+# car1.speed()
+
+# ----------------------------------------------------------------------------------------------------------------
+
