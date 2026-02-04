@@ -13,13 +13,16 @@ import CoffeeMachine.ex as coffee
 import Quizz.main as quizz
 import Painting.ex as paint
 import Snake.main as snake
+import Pong.main as pong
 
 from utils.input_utils import clear, GREEN, RED, RESET
 
 while True:
     print("Exercices :\n1: IMC\n2: Tip calculator\n3: Pizza Delivery\n4: Treasure Island\n5: Rock Paper Scisors\n6: Password Generator\
         \n7: Hangman\n8: Secret Auction\n9: Calculator\n10: BlackJack\n11: Number guessing\n" \
-        "12: Coffe Machine\n13: Quizz\n14: Painting\n15: Snake Game\nq: quit")
+        "12: Coffe Machine\n13: Quizz\n14: Painting\n15: Snake Game\n16: Pong Game\nq: quit")
+    print("\nPS: For ex 14,15,16 you need to 'quit' the game before launching another one\n")
+    
     choice = input("\nChoose an exercice : ")
 
     if choice == "1":
@@ -127,6 +130,13 @@ while True:
     ========================================
     """)
         snake.play_snake()
+    elif choice == "16":
+        print("""
+    ========================================
+                🏓  Pong Game
+    ========================================
+    """)
+        pong.play_pong()
     elif choice == "q":
         print(GREEN + "\nThanks for playing !\n" + RESET)
         break
