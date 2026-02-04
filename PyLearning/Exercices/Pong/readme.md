@@ -12,6 +12,22 @@ I developed the project step by step:
 7. Detect when paddle misses
 8. Keep score
 
+# How to Play
+
+The game is a classic 2-player battle. The goal is to hit the ball with your paddle and make your opponent miss!
+
+*Controls*: 
+
+Left Player (P1) --> w (move up) / s (move down)
+Right Player (P2) --> Up arrow (move up) / Down arrow (move down)
+Quit Game --> 'q'
+
+Rules
+  - Bounce: The ball bounces off the top and bottom walls automatically.
+  - Speed Up: Every time the ball hits a paddle, it picks up speed, making the game harder!
+  - Scoring: If the ball passes your opponent's paddle, you gain 1 point.
+  - Reset: After a point is scored, the ball resets to the center and moves towards the player who just won the point.
+
 ## Logic
 
 The logic explained for each file.
