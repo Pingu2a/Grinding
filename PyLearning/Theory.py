@@ -813,3 +813,10 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
+# with open("my_file.txt") as files:
+#     content = files.read()
+#     print (content)  
+
+with open("new_file.txt", mode="w") as files:
+    files.write("\ntext !")
+    print("Done")
