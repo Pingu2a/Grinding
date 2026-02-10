@@ -817,6 +817,27 @@
 #     content = files.read()
 #     print (content)  
 
-with open("new_file.txt", mode="w") as files:
-    files.write("\ntext !")
-    print("Done")
+# with open("new_file.txt", mode="w") as files:
+#     files.write("\ntext !")
+#     print("Done")
+
+# ----------------------------------------------------------------------------------------------------------------
+# import pandas
+
+# car_data = {
+#     "id": [1, 2, 3, 4, 5],
+#     "brand": ["Toyota", "Honda", "Tesla", "BMW", "BMW"],
+#     "model": ["Corolla", "Civic", "Model 3", "Mustang", "X5"],
+#     "price": [2, 2, 45, 35, 6],
+#     "in_stock": [True, False, True, True, False]
+# }
+
+# data = pandas.DataFrame(car_data)
+
+# bm = data[data.price > 0]
+# powed = bm["price"].pow(2).to_list()
+
+# print(sum(powed))
+# print(data)
+
+# ----------------------------------------------------------------------------------------------------------------

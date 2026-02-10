@@ -33,21 +33,20 @@ import pandas
 # print(f"Temp celsius : {tmp}\nTemp Fahr : {(tmp * 1.8) + 32}")
 
 
-
 # Openeing a CSV file which contains some datas about squirrels in Central Park
 # Findind how much squirrels are grey, red and black
 # Finally creating new csv file with these datas 
 
-squirrels = pandas.read_csv("Exercices/Csvstuff/centralPark.csv")
+# squirrels = pandas.read_csv("Exercices/Csvstuff/centralPark.csv")
 
-gray = len(squirrels[squirrels["Primary Fur Color"] == "Gray"])
-red = len(squirrels[squirrels["Primary Fur Color"] == "Cinnamon"])
-black = len(squirrels[squirrels["Primary Fur Color"] == "Black"])
+# gray = len(squirrels[squirrels["Primary Fur Color"] == "Gray"])
+# red = len(squirrels[squirrels["Primary Fur Color"] == "Cinnamon"])
+# black = len(squirrels[squirrels["Primary Fur Color"] == "Black"])
 
-new_dict = {
-    "Fur Color": ["Gray", "Cinnamon", "Black"],
-    "Count" :[gray,red,black]
-}
+# new_dict = {
+#     "Fur Color": ["Gray", "Cinnamon", "Black"],
+#     "Count" :[gray,red,black]
+# }
 
-data = pandas.DataFrame(new_dict)
-data.to_csv("Exercices/Csvstuff/final.csv")
+# data = pandas.DataFrame(new_dict)
+# data.to_csv("Exercices/Csvstuff/final.csv")
