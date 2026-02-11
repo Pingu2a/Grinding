@@ -1,16 +1,18 @@
 import turtle
 import pandas
-
+import os
 
 def play_states_game():
     screen = turtle.Screen()
     screen.title("US States Game")
     screen.setup(width=725, height=491)
-    image = "Exercices/States/blank_states_img.gif"
+    BASE_DIR = os.path.dirname(__file__)
+    image = os.path.join(BASE_DIR, "blank_states_img.gif")
+    csv_path = os.path.join(BASE_DIR, "50_states.csv")
     screen.addshape(image)
     turtle.shape(image)
 
-    data = pandas.read_csv("Exercices/States/50_states.csv")
+    data = pandas.read_csv(csv_path)
     states = data["state"].to_list()
     score = 0
     guessed = []
@@ -25,7 +27,8 @@ def play_states_game():
         if answer_state == "Exit":
             missing_states = [state for state in states if state not in guessed]
             new_data = pandas.DataFrame(missing_states)
-            new_data.to_csv("Exercices/States/states_to_learn.csv")
+            output_path = os.path.join(BASE_DIR, "states_to_learn.csv")
+            new_data.to_csv(output_path)
             break
         if answer_state in states and answer_state not in guessed:
             score += 1
