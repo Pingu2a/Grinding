@@ -841,3 +841,30 @@
 # print(data)
 
 # ----------------------------------------------------------------------------------------------------------------
+
+# List comprehension
+# [<expression> for <value> in <list>]
+
+# my_list = [1,2,3,4,5,6,7,8,9]
+
+# new_list = [el for el in my_list if el % 2 == 0 if el > 3 if el < 7]
+
+# print(my_list)
+# print(new_list)
+
+# list_of_strings = ['9', '0', '32', '8', '2', '8', '64', '29', '42', '99']
+# numbers = [int(nb) for nb in list_of_strings]
+# result = [nb for nb in numbers if nb % 2 == 0]
+# print(result)
+
+# ----------------------------------------------------------------------------------------------------------------
+
+import random
+
+names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
+
+students_score = {nm:random.randint(60,100) for nm in names}
+
+passed_students = {student:score for (student, score) in students_score.items() if score > 80}
+print(students_score)
+print(passed_students)
