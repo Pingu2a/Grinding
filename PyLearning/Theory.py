@@ -859,12 +859,40 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
-import random
+# import random
 
-names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
+# names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
 
-students_score = {nm:random.randint(60,100) for nm in names}
+# students_score = {nm:random.randint(60,100) for nm in names}
 
-passed_students = {student:score for (student, score) in students_score.items() if score > 80}
-print(students_score)
-print(passed_students)
+# passed_students = {student:score for (student, score) in students_score.items() if score > 80}
+# print(students_score)
+# print(passed_students)
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+# toList = sentence.split()
+# result = {word:len(word) for word in toList}
+
+# print(result)
+
+# weather_c = {"Monday": 12, "Tuesday": 14, "Wednesday": 15, "Thursday": 14, "Friday": 21, "Saturday": 22, "Sunday": 24}
+
+# weather_f = {day:(temp * 9/5) + 32 for (day,temp) in weather_c.items()}
+# print(weather_f)
+
+# ----------------------------------------------------------------------------------------------------------------
+
+import pandas
+
+student_dict = {
+    "student": ["Pingu", "Michel", "Richard"],
+    "score": [56,76,98]
+}
+
+student_data = pandas.DataFrame(student_dict)
+# print(student_data)
+
+for (index, row) in student_data.iterrows():
+    print(row.score)

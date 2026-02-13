@@ -15,7 +15,7 @@ import Painting.ex as paint
 import Snake.main as snake
 import Pong.main as pong
 import States.main as states
-
+import nato.main as nato
 from utils.input_utils import clear, GREEN, RED, RESET
 
 while True:
@@ -145,6 +145,13 @@ while True:
     ========================================
     """)
         states.play_states_game()
+    elif choice == "18":
+        print("""
+    ========================================
+                a,b,c  NATO ALPHA
+    ========================================
+    """)
+        nato.play_game()  
     elif choice == "q":
         print(GREEN + "\nThanks for playing !\n" + RESET)
         break
