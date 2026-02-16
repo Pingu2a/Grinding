@@ -884,15 +884,65 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
-import pandas
+# import pandas
 
-student_dict = {
-    "student": ["Pingu", "Michel", "Richard"],
-    "score": [56,76,98]
-}
+# student_dict = {
+#     "student": ["Pingu", "Michel", "Richard"],
+#     "score": [56,76,98]
+# }
 
-student_data = pandas.DataFrame(student_dict)
-# print(student_data)
+# student_data = pandas.DataFrame(student_dict)
+# # print(student_data)
 
-for (index, row) in student_data.iterrows():
-    print(row.score)
+# for (index, row) in student_data.iterrows():
+#     print(row.score)
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# def test(*zebi):
+#     total = [nb for nb in zebi if nb % 2 == 0]
+#     return sum(total)
+
+# print(test(1,2,5,6))
+
+# def calc(**kwargs):
+#     n1 = 2
+#     n2 = 3
+#     return kwargs["add"] + n1 + (kwargs["mult"] * n2)
+
+# print(calc(add=3,mult=5))
+
+# ----------------------------------------------------------------------------------------------------------------
+
+from tkinter import *
+
+window = Tk()
+window.title("Zeubi")
+window.minsize(width=800,height=600)
+window.config(padx=20,pady=20)
+
+my_label = Label(text="I'm Pignu", font=("Arial", 24, "bold"))
+my_label.grid(row=0,column=0)
+my_label.config(padx=50,pady=50)
+#config or change options of an object/component
+# my_label["text"] = "noot noot"
+# my_label.config(text="okok")
+
+# Button
+
+def button_clicked():
+    michel = input.get()
+    my_label.config(text=michel)
+
+button = Button(text="Click me", command=button_clicked)
+button.grid(row=1,column=1)
+
+button2 = Button(text="Click me")
+button2.grid(row=0,column=3)
+# Entry
+
+input = Entry(width=20)
+input.grid(row=3,column=4)
+
+
+window.mainloop()

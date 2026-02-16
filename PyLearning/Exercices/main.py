@@ -16,13 +16,16 @@ import Snake.main as snake
 import Pong.main as pong
 import States.main as states
 import nato.main as nato
+import mitokm.ex as mito
+
 from utils.input_utils import clear, GREEN, RED, RESET
 
 while True:
     print("Exercices :\n1: IMC\n2: Tip calculator\n3: Pizza Delivery\n4: Treasure Island\n5: Rock Paper Scisors\n6: Password Generator\
         \n7: Hangman\n8: Secret Auction\n9: Calculator\n10: BlackJack\n11: Number guessing\n" \
-        "12: Coffe Machine\n13: Quizz\n14: Painting\n15: Snake Game\n16: Pong Game\n17: States Game\nq: quit")
-    print("\nPS: For ex 14,15,16,17 you need to 'quit' the game before launching another one\n")
+        "12: Coffe Machine\n13: Quizz\n14: Painting\n15: Snake Game\n16: Pong Game\n17: States Game\n"\
+            "18: NATO Game\n19: Miles to Kms converter\nq: quit")
+    print("\nPS: For ex 14,15,16,17,18,19 you need to 'quit' the game before launching another one\n")
     
     choice = input("\nChoose an exercice : ")
 
@@ -152,6 +155,13 @@ while True:
     ========================================
     """)
         nato.play_game()  
+    elif choice == "19":
+        print("""
+    ========================================
+                MILES TO KMS 
+    ========================================
+    """)
+        mito.play_game() 
     elif choice == "q":
         print(GREEN + "\nThanks for playing !\n" + RESET)
         break
