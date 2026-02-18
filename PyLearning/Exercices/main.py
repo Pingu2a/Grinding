@@ -18,14 +18,16 @@ import States.main as states
 import nato.main as nato
 import mitokm.ex as mito
 import pomodoro.main as pomodoro
+import Calcv2.main as calcv2
+
 from utils.input_utils import clear, GREEN, RED, RESET
 
 while True:
     print("Exercices :\n1: IMC\n2: Tip calculator\n3: Pizza Delivery\n4: Treasure Island\n5: Rock Paper Scisors\n6: Password Generator\
         \n7: Hangman\n8: Secret Auction\n9: Calculator\n10: BlackJack\n11: Number guessing\n" \
         "12: Coffe Machine\n13: Quizz\n14: Painting\n15: Snake Game\n16: Pong Game\n17: States Game\n"\
-            "18: NATO Game\n19: Miles to Kms converter\n20: Pomodoro\nq: quit")
-    print("\nPS: For ex 14,15,16,17,18,19, 20you need to 'quit' the game before launching another one\n")
+            "18: NATO Game\n19: Miles to Kms converter\n20: Pomodoro\n21: Calculator V2\nq: quit")
+    print("\nPS: For ex 14,15,16,17,18,19, 20, 21 you need to 'quit' the game before launching another one\n")
     
     choice = input("\nChoose an exercice : ")
 
@@ -169,6 +171,13 @@ while True:
     ========================================
     """)
         pomodoro.play_pomodoro()
+    elif choice == "21":
+        print("""
+    ========================================
+                🧮 Calculator V2
+    ========================================
+    """)
+        calcv2.play()
     elif choice == "q":
         print(GREEN + "\nThanks for playing !\n" + RESET)
         break
