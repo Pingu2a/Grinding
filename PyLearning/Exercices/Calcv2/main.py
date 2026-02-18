@@ -63,5 +63,7 @@ def play():
     Button(text="=", command=lambda: pressed("="), **btn_params).grid(row=4, column=1)
     Button(text="+", command=lambda: pressed("+"), **btn_params).grid(row=4, column=2)
     Button(text="-", command=lambda: pressed("-"), **btn_params).grid(row=4, column=3)
+    Button(text="(", command=lambda: pressed("("), **btn_params).grid(row=4, column=4)
+    Button(text=")", command=lambda: pressed(")"), **btn_params).grid(row=5, column=4)
 
     window.mainloop()
