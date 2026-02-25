@@ -1018,3 +1018,19 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
+# try:
+#     file = open("test.txt")
+#     dictio = {"key":"value"}
+# except FileNotFoundError:
+#     file = open("a_file.txt", "w")
+#     file.write("noot noot")
+# except KeyError as err_msg:
+#     print(f"the key {err_msg} does not exist.")
+# else:
+#     content = file.read()
+#     print(content)
+# finally:
+#     file.close()
+#     print("File was closed")
+
+# ----------------------------------------------------------------------------------------------------------------
