@@ -1,10 +1,14 @@
 {
     "test": {
         "email": "michel@email.com",
-        "password": "MYE39LL@!i^w2!W"
+        "password": "rQq!jC#np%19b*iD"
     },
     "Amazon": {
         "email": "michel@email.com",
         "password": "Fb14m8oc*5c%tDn"
+    },
+    "Facebook": {
+        "email": "okok@mail.com",
+        "password": "wZuTKt%2*J0w"
     }
 }

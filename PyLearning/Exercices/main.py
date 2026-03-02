@@ -20,6 +20,7 @@ import mitokm.ex as mito
 import pomodoro.main as pomodoro
 import Calcv2.main as calcv2
 import pwdmanager.main as pwdmanager
+import flashcard.main as flashcard
 from utils.input_utils import clear, GREEN, RED, RESET
 
 while True:
@@ -27,8 +28,8 @@ while True:
         \n7: Hangman\n8: Secret Auction\n9: Calculator\n10: BlackJack\n11: Number guessing\n" \
         "12: Coffe Machine\n13: Quizz\n14: Painting\n15: Snake Game\n16: Pong Game\n17: States Game\n"\
             "18: NATO Game\n19: Miles to Kms converter\n20: Pomodoro\n21: Calculator V2\n" \
-                "22: Password manager\nq: quit")
-    print("\nPS: For ex 14,15,16,17,18,19, 20, 21, 22 you need to 'quit' the game before launching another one\n")
+                "22: Password manager\n23: Flascards\nq: quit")
+    print("\nPS: For ex 14,15,16,17,18,19, 20, 21, 22, 23 you need to 'quit' the game before launching another one\n")
     
     choice = input("\nChoose an exercice : ")
 
@@ -186,6 +187,13 @@ while True:
     ========================================
     """)
         pwdmanager.play_pwdmanager()
+    elif choice == "23":
+        print("""
+========================================
+            🎴  Flashcards 
+========================================
+""")
+        flashcard.play_flashcard()
     elif choice == "q":
         print(GREEN + "\nThanks for playing !\n" + RESET)
         break
