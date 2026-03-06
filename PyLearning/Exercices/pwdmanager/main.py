@@ -30,7 +30,7 @@ def play_pwdmanager():
         pwd_input.insert(0,final)
         pyperclip.copy(final)
 
-    #Save datas into a txt file 
+    #Save datas into a JSON file 
     def save():
         website = web_input.get()
         mail = mail_input.get()
