@@ -1,8 +1,8 @@
-import pandas
+# import pandas
 # import matplotlib.pyplot as plt
 # from prettytable import PrettyTable
 
-#data = pandas.read_csv("Exercices/Csvstuff/weather_data.csv")
+# data = pandas.read_csv("Exercices/Csvstuff/weather_data.csv")
 
 # table = PrettyTable()
 # table.field_names = data.columns.tolist()
