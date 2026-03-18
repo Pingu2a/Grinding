@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
-PyLearning/.venv/
+.venv/
+venv/
+ENV/
+.env
