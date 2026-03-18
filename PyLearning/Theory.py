@@ -1045,3 +1045,44 @@
 #         break
 
 # ----------------------------------------------------------------------------------------------------------------
+
+# import requests
+
+# # On envoie une requête à l'API météo
+# response = requests.get("https://api.open-meteo.com/v1/forecast?latitude=47.37&longitude=8.54&current_weather=true")
+
+# # L'API nous répond avec des données
+# data = response.json()
+# print(data["current_weather"]["temperature"])  # ex: 18.5°C
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# import requests
+# import json
+
+# response = requests.get("https://restcountries.com/v3.1/all?fields=name,flags,currencies")
+# p = response.json()
+# with open("countries.json", "w", encoding="utf-8") as file:
+#     json.dump(p, file, ensure_ascii=False, indent=4)
+# for country in p:
+#     if country["name"]["common"] == "United States":
+#         print(country["name"]["nativeName"]["eng"]["official"])
+#         print(country["currencies"]["USD"]["symbol"])
+
+# ----------------------------------------------------------------------------------------------------------------
+
+# import requests
+# import json
+
+# iss = requests.get("http://api.open-notify.org/iss-now.json")
+# print(iss.status_code)
+# ip = iss.json()
+# print(ip)
+
+
+import os 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+print(os.getenv("TEST"))
