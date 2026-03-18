@@ -68,9 +68,9 @@ productmd==1.50
 propcache==0.4.1
 proton-core==0.7.3
 proton-keyring-linux==0.2.1
-proton-vpn-api-core==4.14.3
-proton-vpn-daemon==0.13.5
-proton-vpn-gtk-app==4.14.1
+proton-vpn-api-core==4.16.0
+proton-vpn-daemon==0.13.6
+proton-vpn-gtk-app==4.15.0
 psutil==7.0.0
 ptyprocess==0.7.0
 pwquality==1.4.5
@@ -99,10 +99,9 @@ python-pam==2.0.2
 pyudev==0.24.3
 pyxdg==0.28
 PyYAML==6.0.2
-pyynl @ file:///builddir/build/BUILD/kernel-6.18.12-build/kernel-6.18.12/linux-6.18.12-200.fc43.x86_64/tools/net/ynl
 RapidFuzz==3.12.2
 referencing==0.36.2
-regex==2025.10.23
+regex==2026.2.28
 requests==2.32.5
 requests-file==2.0.0
 requests-ftp==0.3.1
