@@ -1071,18 +1071,27 @@
 
 # ----------------------------------------------------------------------------------------------------------------
 
-# import requests
-# import json
+import requests
+from datetime import datetime
+import re
 
 # iss = requests.get("http://api.open-notify.org/iss-now.json")
-# print(iss.status_code)
+# iss.raise_for_status()
 # ip = iss.json()
+# position = (round(float(ip["iss_position"]["latitude"]),2),ip["iss_position"]["longitude"])
 # print(ip)
+# print(position)
 
-
-import os 
-from dotenv import load_dotenv
-
-load_dotenv()
-
-print(os.getenv("TEST"))
+parameters = {
+    "lat": 40.408498221688475,
+    "lng": -3.734209293405049,
+    "formatted" : 0
+}
+sunset = requests.get("https://api.sunrise-sunset.org/json",params=parameters)
+sunset.raise_for_status()
+data = sunset.json()
+sunrise = data["results"]["sunset"]
+split_sunset = re.split("T|:",sunrise)
+time_now = datetime.now()
+print(split_sunset[1])
+print(time_now.hour)
